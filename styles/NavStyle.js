@@ -23,7 +23,7 @@ export const NavLinksStyle = styled.div`
         display: ${props => (props.isClicked ? "flex" : "none")};
         flex-direction: column;
         position: fixed;
-        top: 220px;
+        top: 200px;
         left: 25px;
         @media ${media.large} {
             left: 0;
@@ -33,15 +33,19 @@ export const NavLinksStyle = styled.div`
             position: relative;
         }
         li {
-            font-family: var(--josefin);
-            font-weight: 300;
-            color: var(--white);
-            font-size: 1.5625rem;
+            a {
+                font-family: var(--josefin);
+                font-weight: 300;
+                color: var(--white);
+                font-size: 1.5625rem;
+            }
             @media ${media.large} {
                 position: relative;
-                font-family: var(--alata);
-                font-weight: 400;
-                font-size: 1.125rem;
+                a {
+                    font-family: var(--alata);
+                    font-weight: 400;
+                    font-size: 1.125rem;
+                }
                 cursor: pointer;
                 transition: all 0.3s ease;
                 &::after {
