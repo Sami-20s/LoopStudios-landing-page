@@ -7,7 +7,12 @@ const NavLinks = ({ isClicked }) => {
         <NavLinksStyle isClicked={isClicked}>
             <ul>
                 {linksList.map(link => {
-                    return <li key={link.id}>{link.text}</li>;
+                    return (
+                        <li key={link.id}>
+                            <a href={link.link}> {link.text}</a>
+                            {/* {link.text} */}
+                        </li>
+                    );
                 })}
             </ul>
         </NavLinksStyle>

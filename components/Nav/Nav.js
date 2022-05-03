@@ -7,12 +7,14 @@ const Nav = () => {
     useEffect(() => {
         isClicked
             ? (document.body.style.overflowY = "hidden")
-            : (document.body.style.overflowY = "scroll");
+            : (document.body.style.overflowY = "unset");
     }, [isClicked]);
     return (
         <nav id="nav">
             <NavWrapper isClicked={isClicked}>
-                <img src="/logo.svg" alt="loop links logo" />
+                <a href="#">
+                    <img src="/logo.svg" alt="loop links logo" />
+                </a>
                 <NavLinks isClicked={isClicked} />
                 <BurgerIconStyle>
                     <button onClick={() => setIsClicked(!isClicked)}>
