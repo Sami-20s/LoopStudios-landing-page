@@ -5,7 +5,7 @@ export const NavWrapper = styled.div`
     padding: 40px 25px;
     display: flex;
     height: ${props => (props.isClicked ? "100vh" : "unset")};
-    background-color: ${props => (props.isClicked ? "black" : "red")};
+    background-color: ${props => (props.isClicked ? "black" : "transparent")};
     justify-content: space-between;
     align-items: flex-start;
     overflow: none;
@@ -13,7 +13,7 @@ export const NavWrapper = styled.div`
     @media ${media.large} {
         overflow: unset;
         height: unset;
-        background-color: red;
+        background-color: transparent;
         padding: 60px 165px;
     }
 `;
